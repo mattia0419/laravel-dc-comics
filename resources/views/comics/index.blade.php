@@ -16,8 +16,11 @@
               </a>
           </div>
           @endforeach
-      </div>
+      </div>         
+
+
   </div>
+    <a href="{{ route('comics.create') }}" class="btn btn-success">Crea il tuo fumetto</a>
 
 
 </div>
