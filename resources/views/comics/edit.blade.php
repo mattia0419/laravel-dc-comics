@@ -9,7 +9,12 @@
     @csrf
     @method('PUT')
     <div class="row g-3">
-        <div class="col-3">
+        <div class="col-4">
+            <img src="{{ $comic->thumb }}" alt="" id="preview-image" class="img-fluid">
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-3">
             <label for="title">
                 Titolo
             </label>
@@ -60,6 +65,9 @@
             <button class="btn btn-primary">Salva</button>
         </div>
 
+            </div>
+        </div>
+        
         </div>
     
     </form>
@@ -67,4 +75,14 @@
 
 
 
+@endsection
+@section('scripts')
+<script>
+    const previewImageEl = document.getElementById('preview-image');
+    const thumbInput = document.getElementById('thumb');
+
+    thumbInput.addEventListener('change', function(){
+        previewImageEl.src = this.value;
+    })
+</script>
 @endsection

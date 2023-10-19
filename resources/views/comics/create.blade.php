@@ -8,7 +8,14 @@
     <form action="{{ route('comics.store') }}" method="POST">
     @csrf
     <div class="row g-3">
-        <div class="col-3">
+        
+
+        <div class="col-4">
+            <img src="" alt="" id="preview-image" class="img-fluid">
+        </div>
+        <div class="col-8">
+            <div class="row">
+            <div class="col-3">
             <label for="title">
                 Titolo
             </label>
@@ -58,6 +65,9 @@
         <div class="col-3">
             <button class="btn btn-primary">Salva</button>
         </div>
+    </div>
+        </div>
+        
 
         </div>
     
@@ -66,4 +76,14 @@
 
 
 
+@endsection
+@section('scripts')
+<script>
+    const previewImageEl = document.getElementById('preview-image');
+    const thumbInput = document.getElementById('thumb');
+
+    thumbInput.addEventListener('change', function(){
+        previewImageEl.src = this.value;
+    })
+</script>
 @endsection
