@@ -21,7 +21,25 @@
               <a data-bs-toggle="modal" data-bs-target="#delete-modal-{{ $comic->id }}">
                 <i class="fa-solid fa-trash fa-lg mt-3"></i>              
               </a>
-              <div class="modal fade" id="delete-modal-{{ $comic->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            </div>
+              
+
+
+
+              {{--  --}}
+          
+          @endforeach
+      </div>         
+
+
+  </div>
+    <a href="{{ route('comics.create') }}" class="btn btn-success">Crea il tuo fumetto</a>
+
+
+</div>
+
+@foreach($comics as $comic)
+<div class="modal fade" id="delete-modal-{{ $comic->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -42,25 +60,7 @@
                   </div>
                 </div>
               </div>
-
-
-
-              {{--  --}}
-          </div>
-          @endforeach
-      </div>         
-
-
-  </div>
-    <a href="{{ route('comics.create') }}" class="btn btn-success">Crea il tuo fumetto</a>
-
-
-</div>
-</div>
-
-
-
-
+@endforeach
 
 
 
