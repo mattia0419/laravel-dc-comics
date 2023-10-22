@@ -4,7 +4,7 @@
 <div class="container">
     <a href="{{ route('comics.index') }}" class="btn btn-success">Torna alla lista</a>
     <h1 class="my-5">Modifica fumetto</h1>
-
+    
     <form action="{{ route('comics.update', $comic) }}" method="POST">
     @csrf
     @method('PUT')

@@ -33,8 +33,9 @@
 
 
   </div>
-    <a href="{{ route('comics.create') }}" class="btn btn-success">Crea il tuo fumetto</a>
-
+  
+    <a href="{{ route('comics.create') }}" class="btn btn-success my-3">Crea il tuo fumetto</a>
+{{ $comics->links('pagination::bootstrap-5') }}
 
 </div>
 
